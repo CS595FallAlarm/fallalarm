@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	 android:orientation="vertical"
+	 android:layout_width="fill_parent"
+	 android:layout_height="fill_parent"
+ >
+<TextView
+	 android:layout_width="fill_parent"
+	 android:layout_height="wrap_content"
+	 android:text="@string/hello"
+ />
+
+    <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Patient ID"
+            android:id="@+id/pid"/>
+
+    <TextView
+            android:id="@+id/xcoor1"
+            android:text="X1 Coordinate: "
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+
+    <TextView
+            android:id="@+id/ycoor1"
+            android:text="Y1 Coordinate: "
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+    <TextView
+            android:id="@+id/zcoor1"
+            android:text="Z1 Coordinate: "
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+    <TextView
+            android:id="@+id/xcoor2"
+            android:text="X2 Coordinate: "
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+    <TextView
+            android:id="@+id/ycoor2"
+            android:text="Y2 Coordinate: "
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+    <TextView
+            android:id="@+id/zcoor2"
+            android:text="Z2 Coordinate: "
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+    <TextView
+            android:id="@+id/Risk"
+            android:text="Risk: "
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+<EditText
+	 android:id="@+id/textout"
+	 android:layout_width="fill_parent"
+	 android:layout_height="wrap_content"
+ />
+<Button
+	 android:id="@+id/send"
+	 android:layout_width="fill_parent"
+	 android:layout_height="wrap_content"
+	 android:text="Send"
+ />
+<TextView
+	 android:id="@+id/textin"
+	 android:layout_width="fill_parent"
+	 android:layout_height="wrap_content"
+ />
+</LinearLayout>
+
+<!-- 
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/hello" />
+
+</LinearLayout>
+ -->
