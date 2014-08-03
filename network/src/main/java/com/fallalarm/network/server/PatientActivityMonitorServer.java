@@ -11,6 +11,7 @@ public class PatientActivityMonitorServer extends ThreadPooledServer {
 
 	@Override
 	protected void executeWorker(Socket clientSocket) {
+		System.out.println("Patient activity monitor server executing worker");
 		threadPool.execute(new PatientActivityWorker(clientSocket));
 	}
 

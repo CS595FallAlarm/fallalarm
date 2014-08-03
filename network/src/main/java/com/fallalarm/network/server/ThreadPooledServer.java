@@ -26,6 +26,7 @@ public abstract class ThreadPooledServer implements Runnable {
 			Socket clientSocket = null;
 			try {
 				clientSocket = this.serverSocket.accept();
+				System.out.println("Server socket accepted client socket connection");
 			} catch (IOException e) {
 				if (!isRunning()) {
 					System.out.println("Socket Server Stopped.");
@@ -34,6 +35,7 @@ public abstract class ThreadPooledServer implements Runnable {
 				throw new RuntimeException(
 						"Error while accepting client connection", e);
 			}
+			System.out.println("Server socket executing worker");
 			executeWorker(clientSocket);
 		}
 		threadPool.shutdown();
@@ -48,6 +50,7 @@ public abstract class ThreadPooledServer implements Runnable {
 	private void openServerSocket() {
 		try {
 			this.serverSocket = new ServerSocket(port);
+			System.out.println("Server socket on port "+port+" opened");
 		} catch (IOException e) {
 			throw new RuntimeException(
 					"Error while opening server socket - port " + port, e);
@@ -55,6 +58,7 @@ public abstract class ThreadPooledServer implements Runnable {
 	}
 
 	private synchronized boolean isRunning() {
+		System.out.println("Server socket is running "+isRunning);
 		return isRunning;
 	}
 

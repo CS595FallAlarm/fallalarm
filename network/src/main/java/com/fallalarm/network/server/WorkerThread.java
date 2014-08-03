@@ -10,19 +10,22 @@ import org.apache.commons.io.IOUtils;
 public abstract class WorkerThread implements Runnable{
 
     private Socket clientSocket;
-
+    
     public WorkerThread(Socket clientSocket) {
         this.clientSocket = clientSocket;
     }
 
     public void run() {
         try {
+            long time = System.currentTimeMillis();
+            System.out.println("Message received at: " + time + "," + clientSocket.getReceiveBufferSize());
             InputStream input  = clientSocket.getInputStream();
             OutputStream output = clientSocket.getOutputStream();
-            long time = System.currentTimeMillis();
             byte[] buff = new byte[1024];
             IOUtils.read(input, buff);
-            readMessage();
+            System.out.println("Reading input bytes: " + buff);
+            readMessage(buff);
+            System.out.println("Completed reading input bytes: " + buff);
             input.close();
             System.out.println("Message received at: " + time);
         } catch (IOException e) {
@@ -37,5 +40,5 @@ public abstract class WorkerThread implements Runnable{
      * 102 - Patient message.
      * @return
      */
-    protected abstract String readMessage();
+    protected abstract String readMessage(byte[] buff);
 }

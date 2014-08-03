@@ -10,7 +10,7 @@ public class PatientMessageWorker extends WorkerThread{
 	}
 
 	@Override
-	protected String readMessage() {
+	protected String readMessage(byte[] buff) {
 		// TODO Auto-generated method stub
 		return null;
 	}
