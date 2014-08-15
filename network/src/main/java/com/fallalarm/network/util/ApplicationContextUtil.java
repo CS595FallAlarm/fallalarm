@@ -6,6 +6,7 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 import com.fallalarm.network.config.AppConfig;
 import com.fallalarm.network.dao.MessageJPARepository;
 import com.fallalarm.network.dao.PatientActivityJPARepository;
+import com.fallalarm.network.dao.PatientJPARepository;
 
 public class ApplicationContextUtil {
 
@@ -23,6 +24,10 @@ public class ApplicationContextUtil {
 
 	public static MessageJPARepository getMessageDAO() {
 		return context.getBean(MessageJPARepository.class);
+	}
+	
+	public static PatientJPARepository getPatientDAO() {
+		return context.getBean(PatientJPARepository.class);
 	}
 
 }

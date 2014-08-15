@@ -36,14 +36,14 @@ public class PatientActivity implements Serializable {
 	@Column(name="ACCEL_Z", unique=false, nullable=false)
 	private double accelZ;
 
-	@Column(name="GYRO_X", unique=false, nullable=false)
-	private double gyroX;
+	@Column(name="MAG_X", unique=false, nullable=false)
+	private double magX;
 
-	@Column(name="GYRO_Y", unique=false, nullable=false)
-	private double gyroY;
+	@Column(name="MAG_Y", unique=false, nullable=false)
+	private double magY;
 	
-	@Column(name="GYRO_Z", unique=false, nullable=false)
-	private double gyroZ;
+	@Column(name="MAG_Z", unique=false, nullable=false)
+	private double magZ;
 	
 	@Column(name="GEO_LAT", unique=false, nullable=false)
 	private double geoLat;
@@ -53,6 +53,9 @@ public class PatientActivity implements Serializable {
 
 	@Column(name="TIMESTAMP", unique=false, nullable=false)
 	private Date timestamp;
+	
+	@Column(name="RISK_LEVEL", unique=false, nullable=false)
+	private int riskLevel;
 
 	@OneToOne(cascade = CascadeType.ALL)
 	@JoinColumn(name = "PATIENT_ID")
@@ -90,28 +93,28 @@ public class PatientActivity implements Serializable {
 		this.accelZ = accelZ;
 	}
 
-	public double getGyroX() {
-		return gyroX;
+	public double getMagX() {
+		return magX;
 	}
 
-	public void setGyroX(double gyroX) {
-		this.gyroX = gyroX;
+	public void setMagX(double magX) {
+		this.magX = magX;
 	}
 
-	public double getGyroY() {
-		return gyroY;
+	public double getMagY() {
+		return magY;
 	}
 
-	public void setGyroY(double gyroY) {
-		this.gyroY = gyroY;
+	public void setMagY(double magY) {
+		this.magY = magY;
 	}
 
-	public double getGyroZ() {
-		return gyroZ;
+	public double getMagZ() {
+		return magZ;
 	}
 
-	public void setGyroZ(double gyroZ) {
-		this.gyroZ = gyroZ;
+	public void setMagZ(double magZ) {
+		this.magZ = magZ;
 	}
 
 	public double getGeoLat() {
@@ -146,4 +149,13 @@ public class PatientActivity implements Serializable {
 		this.patient = patient;
 	}
 
+	public int getRiskLevel() {
+		return riskLevel;
+	}
+
+	public void setRiskLevel(int riskLevel) {
+		this.riskLevel = riskLevel;
+	}
+
+	
 }

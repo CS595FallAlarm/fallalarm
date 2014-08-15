@@ -8,6 +8,7 @@ import com.fallalarm.network.data.entity.Patient;
 
 public interface PatientJPARepository extends JpaRepository<Patient,Integer>, JpaSpecificationExecutor<Patient> {
 	
+	public Patient findById(long id);
 	
 }
  
