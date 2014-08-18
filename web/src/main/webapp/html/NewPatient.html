@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>insert new patient</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+<style>
+
+</style>
+</head>
+<body >
+<div style="background-image:url(image/Senior.png); margin-left:80px; width:1200px;height:200px;" >
+<div style="margin-left:50px; margin-top:10px;">
+<br/><br/>
+<h1>Add New Patient </h1>
+</div>
+<div style="margin-left:120px; margin-top:100px;">
+<ul> <li><a href="index595.html">Home</a></li>
+<li><a href="patientList">View All Patient</a></li>
+<li><a href="NewPatient.html">Add New Patient</a></li>
+<li><a href="Send.jsp">Send Email</a></li>
+<li><a href="index.html">Home</a></li>
+</ul>
+</div>
+</div>
+<hr class="style-one">
+<div style="margin-left:80px; width:1200px;">
+<div style="float:left; background-color:white; width:1200px ">
+<div style="float:left;">
+<fieldset style="margin-left:200px;margin-top:50px; width:400px;">
+<legend>Add New Patient</legend>
+<form name="insertPatient" action="insertPatient" method="GET"><br>
+
+<h5>Patient Information:</h5>
+<table>
+<tr><th>Patient ID:</th> <td> <input type="Text" name="pID"/></td></tr>
+<tr><th>First Name: </th> <td> <input type="TEXT" name="fName"/></td></tr>
+<tr><th>Last Name :</th> <td>  <input type="TEXT" name="lName"/></td></tr>
+<tr><th> Age: </th> <td> <input type="number" size="6" name="age" min="18" max="99" value="21"/></td></tr>
+<tr><th>Gender : </th> <td> <input type="radio" name="sex" value="male"/>Male
+<input type="radio" name="sex" value="female"/>Female</td></tr>
+<tr><th>Address   :</th> <td>  <input type="TEXT" name="address"/></td></tr>
+<tr><th>City  :</th> <td>  <input type="TEXT" name="city"/></td></tr>
+<tr><th>State :</th> <td>  <input type="TEXT" name="state" pattern="[A-Za-z]{2}"/></td></tr>
+<tr><th>ZIP Code  :</th> <td>  <input type="TEXT" name="zip" pattern="[0-9]{5}"/></td></tr>
+<tr><th>Phone     :</th> <td>  <input type="TEXT" name="phone" pattern="[0-9]{9}"/></td></tr>
+<tr><th>Device ID : </th> <td> <input type="TEXT" name="deviceid"/></td></tr>
+<tr><th>Email : </th> <td> <input type="email" name="email"/></td></tr>
+<tr><th>Join Date: </th> <td> <input type="date" name="date"/></td></tr>
+
+</table>
+
+<h5>Nurse Information</h5>
+<table>
+<tr><th>First Name:</th> <td><input type="TEXT" name="nfName"></td></tr>
+<tr><th>Last Name:</th> <td><input type="TEXT" name="nlName"></td></tr>
+
+</table>
+    <input type="submit" name="insert" value="ADD">
+</form>
+</fieldset>
+</div>
+<div style="float:right; margin-top:200px;margin-right:100px; width:450px;">
+<h3>HTML5 Validation</h3>
+ <img src="image/valid.png" alt="senior" title="senior" style="margin-left:5px; box-shadow: 10px 10px 5px #888888;" >
+</div>
+</div>
+
+
+</div>
+</body>
+</html>
