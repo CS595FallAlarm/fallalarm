@@ -5,10 +5,18 @@ import java.nio.charset.Charset;
 import java.sql.Date;
 import java.util.Calendar;
 
+import javax.mail.MessagingException;
+
 import org.apache.commons.lang3.StringUtils;
 
+import com.fallalarm.network.dao.MessageJPARepository;
 import com.fallalarm.network.dao.PatientActivityJPARepository;
+import com.fallalarm.network.dao.PatientJPARepository;
+import com.fallalarm.network.data.entity.Message;
+import com.fallalarm.network.data.entity.Nurse;
+import com.fallalarm.network.data.entity.Patient;
 import com.fallalarm.network.data.entity.PatientActivity;
+import com.fallalarm.network.notification.EmailNotifier;
 import com.fallalarm.network.util.ApplicationContextUtil;
 
 
@@ -58,6 +66,34 @@ public class PatientActivityWorker extends WorkerThread {
 			System.out.println("Mag Y :"+magY);
 			System.out.println("Mag Z :"+magZ);
 			System.out.println("risk :"+risk);
+			if(StringUtils.isNotBlank(risk)) {
+				int riskLevel = Integer.parseInt(risk);
+				if(riskLevel > 4) {
+					//get the patient details
+					if(StringUtils.isNotBlank(patientId)) {
+						int patientID = Integer.parseInt(patientId);
+						PatientJPARepository patientDAO = ApplicationContextUtil.getPatientDAO();
+						Patient patient = patientDAO.findOne(patientID);
+						Nurse nurse = patient.getNurse();
+						String nurseEmail = nurse.getEmail();
+						String patientName = String.format("%s %s", patient.getFirstName(), patient.getLastName()); 
+						//send email notification to nurse.
+						try {
+							EmailNotifier.generateAndSendEmail(patientId, patientName, risk, nurseEmail);
+						} catch (MessagingException e) {
+							e.printStackTrace();
+							System.err.println("Error while sending email notification");
+						}
+						//send an instant message to nurse
+						MessageJPARepository messageDAO =  ApplicationContextUtil.getMessageDAO();
+						Message msg = new Message();
+						msg.setContent(String.format("EMERGENCY ALERT - PATIENT %s HAS AN EMERGENCY - Ward # 100", patientName));
+						msg.setFromDevice(patient.getDevice());
+						msg.setToDevice(nurse.getDevice());
+						messageDAO.save(msg);
+					}	
+			    }
+			}
 			
 		}
 		System.out.println("Patient activity worker , read message -"+message);

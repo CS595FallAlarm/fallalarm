@@ -34,7 +34,7 @@ public class EmailNotifier  {
      * @throws AddressException
      * @throws MessagingException
      */
-    public static void generateAndSendEmail(String patientId, String riskLevel, String toAddress) throws AddressException, MessagingException {
+    public static void generateAndSendEmail(String patientId, String patientName, String riskLevel, String toAddress) throws AddressException, MessagingException {
  
         System.out.println("\n 1st ===> setup Mail Server Properties..");
         mailServerProperties = System.getProperties();

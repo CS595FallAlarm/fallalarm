@@ -31,6 +31,9 @@ public class Nurse implements Serializable {
 
 	@Column(name="LAST_NAME", unique=false, nullable=false, length=50)
 	private String lastName;
+	
+	@Column(name="EMAIL", unique=false, nullable=false, length=50)
+	private String email;
 
 	@OneToOne(cascade = CascadeType.ALL)
 	@JoinColumn(name = "DEVICE_ID")
@@ -67,5 +70,15 @@ public class Nurse implements Serializable {
 	public void setDevice(Device device) {
 		this.device = device;
 	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+	
+	
 	
 }
