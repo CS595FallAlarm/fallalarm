@@ -18,10 +18,10 @@
 		</div>
 		<div style="margin-left: 120px; margin-top: 100px;">
 			<ul>
-				<li><a href="/jsp/index595.jsp">Home</a></li>
+				<li><a href="jsp/index595.jsp">Home</a></li>
 				<li><a href="patientList">View All Patient</a></li>
-				<li><a href="../html/NewPatient.html">Add New Patient</a></li>
-				<li><a href="/jsp/Send.jsp">Send Email</a></li>
+				<li><a href="html/NewPatient.html">Add New Patient</a></li>
+				<li><a href="jsp/Send.jsp">Send Email</a></li>
 
 			</ul>
 		</div>

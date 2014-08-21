@@ -17,7 +17,8 @@ public class DBConnection {
 		String dbSourceUrl = "jdbc:mysql://localhost:3306/fallalarm";
 		Class.forName("com.mysql.jdbc.Driver").newInstance();
 		try {
-			dbConn = DriverManager.getConnection(dbSourceUrl, "root", "admin");
+			//dbConn = DriverManager.getConnection(dbSourceUrl, "root", "admin");
+			dbConn = DriverManager.getConnection(dbSourceUrl, "fallalarm", "fallalarm");
 			//getPatient(dbConn);
 			// Action2(dbConn,"CS100","database", 3);
 			//dbConn.close();
