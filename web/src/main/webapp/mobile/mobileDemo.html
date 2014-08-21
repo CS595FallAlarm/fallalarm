@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>Fall Arm App</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="keywords" content="mobile EmergencyServices, mobile EmergencyServices site">
+        <meta name="author" content="sam deering">
+        <script src="js/jquery-1.8.3.min.js"></script>
+        <script src="js/jquery.mobile-1.2.0.min.js"></script>
+        <link href="css/jquery.mobile.structure-1.2.0.min.css" rel="stylesheet">
+        <link href="css/jquery.mobile.theme-1.2.0.min.css" rel="stylesheet">
+        <link href="css/jquery.mobile-1.2.0.min.css" rel="stylesheet">
+        <link href="css/photoswipe.css" rel="stylesheet">
+        <link href="css/style.css" rel="stylesheet">
+        <script src="js/script.js"></script>
+        <script src="js/settings.js"></script>
+        <script src="js/klass.min.js"></script>
+        <script src="js/code.photoswipe.jquery-3.0.5.min.js"></script>
+    </head>
+
+    <body>
+
+        <!-- homepage -->
+        <div data-role="page" id="home">
+            <div data-role="header">
+                <h1>Fall Arm App</h1>
+            </div>
+            <div data-role="content">
+
+                    <div class="pt-menu">
+                        <a data-theme="d" data-corners="false" data-role="button" href="#MedicalServices">
+                            <img src="C:/Users/Ninad/Desktop/Capstone/Icons/Web0.2ama_PNG/48x48 - Web0.2ama/Social Media - Netvibes.png" alt="rss" style="display: block; margin: 0 auto">
+                            MedicalServices
+                        </a>
+
+                        <a data-theme="d" data-corners="false" data-role="button" href="#EmergencyServices">
+                            <img src="C:/Users/Ninad/Desktop/Capstone/Icons/Web0.2ama_PNG/48x48 - Web0.2ama/Toolbar - Alert.png" alt="rss" style="display: block; margin: 0 auto">
+                            EmergencyServices
+                        </a>
+
+                        <a data-theme="d" data-corners="false" data-role="button" href="#locationServices">
+                            <img src="C:/Users/Ninad/Desktop/Capstone/Icons/Web0.2ama_PNG/48x48 - Web0.2ama/World - America.png" alt="mail" style="display: block; margin: 0 auto">
+                            locationServices
+                        </a>
+
+                        <a data-theme="d" data-corners="false" data-role="button" href="#userSettings">
+                            <img src="C:/Users/Ninad/Desktop/Capstone/Icons/Web0.2ama_PNG/48x48 - Web0.2ama/Contact.png" alt="mail" style="display: block; margin: 0 auto">
+                            user Settings
+                        </a>
+
+                        <a data-theme="d" data-corners="false" data-role="button" href="#messageServices">
+                            <img src="C:/Users/Ninad/Desktop/Capstone/Icons/Web0.2ama_PNG/48x48 - Web0.2ama/Mail - Close.png" alt="mail" style="display: block; margin: 0 auto">
+                            messageServices
+                        </a>
+
+                        <a data-theme="d" data-corners="false" data-role="button" href="#appSettings">
+                            <img src="C:/Users/Ninad/Desktop/Capstone/Icons/Web0.2ama_PNG/48x48 - Web0.2ama/Settings.png" alt="mail" style="display: block; margin: 0 auto">
+                            appSettings
+                        </a>
+
+                    </div>
+
+            </div>
+            <div data-role="footer">
+                <h2>Fall Arm Team3</h2>
+                <p class="copyright">&copy; Copyright Team3 2014</p>
+            </div>
+        </div>
+
+        <!-- MedicalServices page -->
+        <div data-role="page" id="MedicalServices" data-title="MedicalServices">
+            <div data-role="header">
+                <h1>MedicalServices</h1>
+                <a data-role="button" href="#home" data-transition="flip" data-icon="home" data-corners="false">Home</a>
+            </div>
+            <div data-role="content">
+
+                <div id="locationServices-links" class="pt-menu">
+
+                    <a data-theme="d" data-corners="false" data-role="button" href="#pillsLog">
+                        <img src="C:/Users/Ninad/Desktop/Capstone/Icons/Web0.2ama_PNG/48x48 - Web0.2ama/Toolbar - Menu.png" alt="pillsLog" style="display: block; margin: 0 auto">
+                        pillsLog
+                    </a>
+
+                    <a data-theme="d" data-corners="false" data-role="button" href="#reportGeneration">
+                        <img src="C:/Users/Ninad/Desktop/Capstone/Icons/Web0.2ama_PNG/48x48 - Web0.2ama/Newspaper.png" alt="reportGeneration" style="display: block; margin: 0 auto">
+                        reportGeneration
+                    </a>
+                </div>    
+            </div>
+        </div>
+
+<script>
+    $(function() {
+        $(".phonecell").click(function(){
+            var PhoneNumber = $(this).text();
+            PhoneNumber=PhoneNumber.replace("Phone:","");
+            window.location.href="tel://"+PhoneNumber;
+        });
+    });
+    </script>
+
+        <!-- EmergencyServices page -->
+        <div data-role="page" id="EmergencyServices" data-title="EmergencyServices">
+            <div data-role="header">
+                <h1>Emergency Services</h1>
+                <a data-role="button" href="#home" data-transition="flip" data-icon="home" data-corners="false">Home</a>
+            </div>
+            <div data-role="content">
+
+                <div id="locationServices-links" class="pt-menu">
+
+                    <a data-theme="d" data-corners="false" data-role="button" href="tel:+14086005741">
+                        <img src="C:/Users/Ninad/Desktop/Capstone/Icons/Web0.2ama_PNG/48x48 - Web0.2ama/User - F.png" alt="callNurse" style="display: block; margin: 0 auto">
+                        callNurse
+                    </a>
+
+                    <a data-theme="d" data-corners="false" data-role="button" href="tel:+14086005741">
+                        <img src="C:/Users/Ninad/Desktop/Capstone/Icons/Web0.2ama_PNG/48x48 - Web0.2ama/User - M.png" alt="callFriend" style="display: block; margin: 0 auto">
+                        callFriend
+                    </a>
+
+                    <a data-theme="d" data-corners="false" data-role="button" href="#tel:+14086005741">
+                        <img src="C:/Users/Ninad/Desktop/Capstone/Icons/Web0.2ama_PNG/48x48 - Web0.2ama/Truck - Shipment.png" alt="callAmbulance" style="display: block; margin: 0 auto">
+                        callAmbulance
+                    </a>
+
+                    <a data-theme="d" data-corners="false" data-role="button" href="#fakeCall">
+                        <img src="C:/Users/Ninad/Desktop/Capstone/Icons/Web0.2ama_PNG/48x48 - Web0.2ama/Toolbar - Delete.png" alt="fakeCall" style="display: block; margin: 0 auto">
+                        fakeCall
+                    </a>
+                </div>    
+            </div>
+        </div>
+
+        <!-- locationServices page -->
+        <div data-role="page" id="locationServices" data-title="locationServices">
+            <div data-role="header">
+                <h1>locationServices</h1>
+                <a data-role="button" href="#home" data-transition="flip" data-icon="home" data-corners="false">Home</a>
+            </div>
+            <div data-role="content">
+
+                <div id="locationServices-links" class="pt-menu">
+
+                    <a data-theme="d" data-corners="false" data-role="button" href="#CurrentLocation">
+                        <img src="C:/Users/Ninad/Desktop/Capstone/Icons/Web0.2ama_PNG/48x48 - Web0.2ama/Maps.png" alt="CurrentLocation" style="display: block; margin: 0 auto">
+                        CurrentLocation
+                    </a>
+
+                    <a data-theme="d" data-corners="false" data-role="button" href="#directionsToHome">
+                        <img src="C:/Users/Ninad/Desktop/Capstone/Icons/Web0.2ama_PNG/48x48 - Web0.2ama/Maps - Flags.png" alt="directionsToHome" style="display: block; margin: 0 auto">
+                        directionsToHome
+                    </a>
+
+                    <a data-theme="d" data-corners="false" data-role="button" href="#nearbyHospitals">
+                        <img src="C:/Users/Ninad/Desktop/Capstone/Icons/Web0.2ama_PNG/48x48 - Web0.2ama/google+.png" alt="nearbyHospitals" style="display: block; margin: 0 auto">
+                        nearbyHospitals
+                    </a>
+
+                    <a data-theme="d" data-corners="false" data-role="button" href="#nearbyPharmacy">
+                        <img src="C:/Users/Ninad/Desktop/Capstone/Icons/Web0.2ama_PNG/48x48 - Web0.2ama/youtube.png" alt="nearbyPharmacy" style="display: block; margin: 0 auto">
+                        nearbyPharmacy
+                    </a>
+                </div>    
+            </div>
+        </div>
+
+                <!-- userSettings page -->
+        <div data-role="page" id="userSettings" data-title="userSettings">
+            <div data-role="header">
+                <h1>user Settings</h1>
+                <a data-role="button" href="#home" data-transition="flip" data-icon="home" data-corners="false">Home</a>
+            </div>
+            <div data-role="content">
+
+                <div id="locationServices-links" class="pt-menu">
+                    
+                </div>    
+            </div>
+        </div>
+
+                <!-- messageServices page -->
+        <div data-role="page" id="messageServices" data-title="messageServices">
+            <div data-role="header">
+                <h1>messageServices</h1>
+                <a data-role="button" href="#home" data-transition="flip" data-icon="home" data-corners="false">Home</a>
+            </div>
+            <div data-role="content">
+
+                <div id="locationServices-links" class="pt-menu">
+
+                    <a data-theme="d" data-corners="false" data-role="button" href="#composeMessage">
+                        <img src="C:/Users/Ninad/Desktop/Capstone/Icons/Web0.2ama_PNG/48x48 - Web0.2ama/twitter.png" alt="composeMessage" style="display: block; margin: 0 auto">
+                        composeMessage
+                    </a>
+
+                    <a data-theme="d" data-corners="false" data-role="button" href="#recievedMessage">
+                        <img src="C:/Users/Ninad/Desktop/Capstone/Icons/Web0.2ama_PNG/48x48 - Web0.2ama/facebook.png" alt="recievedMessage" style="display: block; margin: 0 auto">
+                        recievedMessage
+                    </a>
+
+                    <a data-theme="d" data-corners="false" data-role="button" href="#sentMessage">
+                        <img src="C:/Users/Ninad/Desktop/Capstone/Icons/Web0.2ama_PNG/48x48 - Web0.2ama/google+.png" alt="sentMessage" style="display: block; margin: 0 auto">
+                        sentMessage
+                    </a>
+
+                    <a data-theme="d" data-corners="false" data-role="button" href="#sendPicture">
+                        <img src="C:/Users/Ninad/Desktop/Capstone/Icons/Web0.2ama_PNG/48x48 - Web0.2ama/youtube.png" alt="sendPicture" style="display: block; margin: 0 auto">
+                        sendPicture
+                    </a>
+
+                    <a data-theme="d" data-corners="false" data-role="button" href="#messageTemplates">
+                        <img src="C:/Users/Ninad/Desktop/Capstone/Icons/Web0.2ama_PNG/48x48 - Web0.2ama/linkedin.png" alt="messageTemplates" style="display: block; margin: 0 auto">
+                        messageTemplates
+                    </a>
+                </div>    
+            </div>
+        </div>
+
+                <!-- appSettings page -->
+        <div data-role="page" id="appSettings" data-title="appSettings">
+            <div data-role="header">
+                <h1>appSettings</h1>
+                <a data-role="button" href="#home" data-transition="flip" data-icon="home" data-corners="false">Home</a>
+            </div>
+            <div class="ui-body ui-body-d ui-textalign-left">
+
+                <div class="tablerow">
+                    <label for="flip-1">Font Size:</label>
+                    <select name="flipFont" id="flipFont" data-role="slider">
+                        <option value="off">Off</option>
+                        <option value="on">On</option>
+                    </select>
+                </div>
+
+                <div class="tablerow">
+                    <label for="flip-1">Day/ Night:</label>
+                    <select name="flipStyle" id="flipStyle" data-role="slider" data-theme="a">
+                        <option value="off">Day</option>
+                        <option value="on">Night</option>
+                    </select>
+                </div>                
+                
+                <script type="text/javascript">
+                    var currentTime = new Date().getHours();
+                    if (7 <= currentTime && currentTime < 20) {
+                        if (document.body) {
+                            document.body.background = "http://itsnotch.com/tumblr/images/daytime_bg.jpg";
+                        }
+                    }
+                    else {
+                        if (document.body) {
+                            document.body.background = "http://itsnotch.com/tumblr/images/nighttime_bg.jpg";
+                        }
+                    }
+
+                </script>
+
+                
+
+
+                <div id="locationServices-links" class="pt-menu">
+
+                     
+
+                    <!--div data-role="fieldcontain">
+                        <label for="flip-c">Flip switch:</label>
+                        <select name="slider" id="flip-c" data-role="slider" >
+                            <option value="no">No</option>
+                            <option value="yes">Yes</option>
+                        </select> 
+                    </div>
+
+                    <a data-theme="d" data-corners="false" data-role="button" href="#fontSize">
+                        <img src="C:/Users/Ninad/Desktop/Capstone/Icons/Web0.2ama_PNG/48x48 - Web0.2ama/twitter.png" alt="fontSize" style="display: block; margin: 0 auto">
+                        fontSize
+                    </a> 
+
+                    <a data-theme="d" data-corners="false" data-role="button" href="#dayNight">
+                        <img src="C:/Users/Ninad/Desktop/Capstone/Icons/Web0.2ama_PNG/48x48 - Web0.2ama/facebook.png" alt="dayNight" style="display: block; margin: 0 auto">
+                        dayNight
+                    </a>-->
+
+                    <a data-theme="d" data-corners="false" data-role="button" href="notification">
+                        <img src="C:/Users/Ninad/Desktop/Capstone/Icons/Web0.2ama_PNG/48x48 - Web0.2ama/google+.png" alt="notification" style="display: block; margin: 0 auto">
+                        notification / Reminder
+                    </a>
+
+                    <a data-theme="d" data-corners="false" data-role="button" href="#newsFeed">
+                        <img src="C:/Users/Ninad/Desktop/Capstone/Icons/Web0.2ama_PNG/48x48 - Web0.2ama/youtube.png" alt="newsFeed" style="display: block; margin: 0 auto">
+                        newsFeed
+                    </a>
+                </div>    
+            </div>
+        </div>
+
+    </body>
+
+</html>
