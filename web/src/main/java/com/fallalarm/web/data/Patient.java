@@ -9,6 +9,10 @@ public class Patient {
 	private int device_id;
 	private int nurse_id;
 
+	public Patient() {
+		
+	}
+	
 	public Patient(int id, String first_name, String last_name, String address,
 			String emergency_phone, int device_id) {
 		this.id = id;
@@ -20,52 +24,12 @@ public class Patient {
 
 	}
 
-	public void setId(int id) {
-		this.id = id;
-	}
-
-	public int getID() {
+	public int getId() {
 		return id;
 	}
 
-	public void setLastName(String lname) {
-		this.last_name = lname;
-	}
-
-	public String getLastName() {
-		return last_name;
-	}
-
-	public void setFirstName(String fname) {
-		this.first_name = fname;
-	}
-
-	public String getFirstName() {
-		return first_name;
-	}
-
-	public void setAddress(String address) {
-		this.address = address;
-	}
-
-	public String getAddress() {
-		return address;
-	}
-
-	public void setPhone(String phone) {
-		this.emergency_phone = phone;
-	}
-
-	public String getPhone() {
-		return emergency_phone;
-	}
-
-	public void setDeviceId(int deviceid) {
-		this.device_id = deviceid;
-	}
-
-	public int getDeviceID() {
-		return device_id;
+	public void setId(int id) {
+		this.id = id;
 	}
 
 	public String getFirst_name() {
@@ -82,6 +46,14 @@ public class Patient {
 
 	public void setLast_name(String last_name) {
 		this.last_name = last_name;
+	}
+
+	public String getAddress() {
+		return address;
+	}
+
+	public void setAddress(String address) {
+		this.address = address;
 	}
 
 	public String getEmergency_phone() {
@@ -108,9 +80,5 @@ public class Patient {
 		this.nurse_id = nurse_id;
 	}
 
-	public int getId() {
-		return id;
-	}
-	
 	
 }

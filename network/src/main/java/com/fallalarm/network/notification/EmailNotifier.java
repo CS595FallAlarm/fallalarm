@@ -22,7 +22,7 @@ public class EmailNotifier  {
     private static MimeMessage generateMailMessage;
     
     public static void main(String args[]) throws AddressException, MessagingException {
-        generateAndSendEmail("10001","4", "cs595fallalarmemail1@gmail.com");
+        generateAndSendEmail("10001","Test patient", "4", "cs595fallalarmemail1@gmail.com");
         System.out.println("Email notification sent successfully");
     }
  
