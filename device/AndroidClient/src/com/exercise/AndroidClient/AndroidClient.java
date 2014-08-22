@@ -99,7 +99,7 @@ public class AndroidClient extends Activity implements SensorEventListener {
 	private float sensorRate = 0.100f;  //100 ms
 	
 	protected ServerSocket serverSocket;
-	protected int port = 6000;
+	protected int port = 8080;
 
 	private Socket clientSocket; 
 	
@@ -107,7 +107,7 @@ public class AndroidClient extends Activity implements SensorEventListener {
 	
 	static {
 		settings = new Settings();
-		settings.setPatientId(1001);
+		settings.setPatientId(10001);
 	}
 	/** Called when the activity is first created. */
 	@Override

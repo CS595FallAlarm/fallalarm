@@ -69,12 +69,12 @@
 				</tr>
 				<%
 					for (Patient curPatient : patientList) {
-							id = curPatient.getID();
-							firstName = curPatient.getFirstName();
-							lastName = curPatient.getLastName();
+							id = curPatient.getId();
+							firstName = curPatient.getFirst_name();
+							lastName = curPatient.getLast_name();
 							address = curPatient.getAddress();
-							phone = curPatient.getPhone();
-							device_id = curPatient.getDeviceID();
+							phone = curPatient.getEmergency_phone();
+							device_id = curPatient.getDevice_id();
 				%>
 				<tr>
 					<td><%=id%></td>
